@@ -1,7 +1,14 @@
 import React from "react";
 import "./client-main.css";
+import { RouterProvider } from "react-router-dom";
+import { RoutesClient } from "./routes/route-client";
 
 function AppClient() {
-  return <div className="text-[45px]">อ๋อ มีอันเดียวแม่งไวกว่า</div>;
+  return (
+    <RouterProvider
+      router={RoutesClient}
+      future={{ v7_startTransition: true }}
+    />
+  );
 }
 export default AppClient;
