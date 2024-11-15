@@ -11,7 +11,7 @@ Encore
   .setOutputPath("public/build/")
   // public path used by the web server to access the output path
   .setPublicPath("/build")
-  // only needed for CDN's or sub-directory deploy
+  // only needed for CDN's or subdirectory deploy
   //.setManifestKeyPrefix('build/')
 
   /*
@@ -20,20 +20,8 @@ Encore
    * Each entry will result in one JavaScript file (e.g. app.js)
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
-  // .addEntry('app', './assets/app.js')
-  // .addEntry('login', './assets/login.js')
-  // .addEntry('customer-request', './assets/customer-request.js')
-  // .addEntry('reset-password', './assets/reset-password.js')
-  // .addEntry('project-detail','./assets/project-detail.js')
-  // .addEntry('project-list','./assets/project-list.js')
-  // .addEntry('bdvm-dashboard','./assets/bdvm-dashboard.js')
-  // .addEntry('dashboard', './assets/dashboard.js')
-  // .addEntry("survey", "./assets/survey.js")
-  // .addEntry("static_data", "./assets/static-data.js")
-  // .addEntry("developing_index", "./assets/developing-index.js")
-  // .addEntry("analytic_data", "./assets/analytic-data.js")
   .addEntry("client", "./assets/main-client.jsx")
-  .addEntry("react-app", "./assets/react-app.js")
+  //.addEntry("react-app", "./assets/react-app.js")
 
   // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
   // .enableStimulusBridge('./assets/controllers.json')
@@ -58,15 +46,19 @@ Encore
   // enables hashed filenames (e.g. app.abc123.css)
   .enableVersioning(Encore.isProduction())
 
-  .configureBabel((config) => {
-    config.plugins.push("@babel/plugin-proposal-class-properties");
-  })
+  // configure Babel
+  // .configureBabel((config) => {
+  //     config.plugins.push('@babel/a-babel-plugin');
+  // })
 
-  // enables @babel/preset-env polyfills
+  // enables and configure @babel/preset-env polyfills
   .configureBabelPresetEnv((config) => {
     config.useBuiltIns = "usage";
-    config.corejs = 3;
+    config.corejs = "3.38";
   })
+
+  // enables Sass/SCSS support
+  //.enableSassLoader()
 
   // uncomment if you use TypeScript
   //.enableTypeScriptLoader()
@@ -80,6 +72,6 @@ Encore
 //.enableIntegrityHashes(Encore.isProduction())
 
 // uncomment if you're having problems with a jQuery plugin
-// .autoProvidejQuery()
+//.autoProvidejQuery()
 
 module.exports = Encore.getWebpackConfig();

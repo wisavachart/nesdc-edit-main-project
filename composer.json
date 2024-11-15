@@ -64,7 +64,7 @@
     "symfony/ux-react": "^2.7",
     "symfony/validator": "6.0.*",
     "symfony/web-link": "6.0.*",
-    "symfony/webpack-encore-bundle": "^1.16",
+    "symfony/webpack-encore-bundle": "^1.17",
     "symfony/workflow": "6.0.*",
     "symfony/yaml": "6.0.*",
     "symfonycasts/verify-email-bundle": "^1.11",
