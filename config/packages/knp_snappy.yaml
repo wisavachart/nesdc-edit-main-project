@@ -1,0 +1,15 @@
+knp_snappy:
+    temporary_folder: "%kernel.cache_dir%/snappy"
+    process_timeout: 20 # In seconds
+    pdf:
+        enabled:    true
+#        binary:     "/usr/bin/wkhtmltopdf"
+        binary:     '"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"'
+        options:
+            'page-size': 'A4'
+            'orientation': 'landscape'
+    image:
+        enabled:    true
+#        binary:     "/usr/bin/wkhtmltopdf"
+        binary:     '"C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"'
+        options:    []

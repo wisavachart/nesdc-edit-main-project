@@ -1,0 +1,98 @@
+.react-pdf__Page__annotations {
+    height: 0 !important;
+    width: 0 !important;
+}
+.MuiTableCell-root {
+    font-family: Kanit !important;
+}
+.MuiTabPanel-root {
+    padding-top: 5px !important;
+}
+.MuiGrid-item {
+    padding-top: 5px!important;
+}
+canvas {
+    /* border: 1px solid #dddddd; */
+    margin-top: 10px;
+}
+/*.row-section{float:left; width:100%; background: #42275a;  !* fallback for old browsers *!*/
+/*}*/
+/*.row-section h2{float:left; width:100%; color:#fff; margin-bottom:30px; font-size: 14px;}*/
+/*.row-section h2 span{font-family: 'Libre Baskerville', serif; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px;font-weight:700;}*/
+/*.row-section h2 a{color:#d2abce;}*/
+/*.row-section .row-block{background:#fff; padding:20px; margin-bottom:50px;}*/
+/*.row-section .row-block ul{margin:0; padding:0;}*/
+/*.row-section .row-block ul li{list-style:none; margin-bottom:20px;}*/
+/*.row-section .row-block ul li:last-child{margin-bottom:0;}*/
+/*.row-section .row-block ul li:hover{cursor:grabbing;}*/
+/*.row-section .row-block .media{border:1px solid #d5dbdd; padding:5px 20px; border-radius: 5px; box-shadow:0px 2px 1px rgba(0,0,0,0.04); background:#fff;}*/
+/*.row-section .media .media-left img{width:75px;}*/
+/*.row-section .media .media-body p{padding: 0 15px; font-size:14px;}*/
+/*.row-section .media .media-body h4 {color: #6b456a; font-size: 18px; font-weight: 600; margin-bottom: 0; padding-left: 14px; margin-top:12px;}*/
+/*.btn-default{background:#6B456A; color:#fff; border-radius:30px; border:none; font-size:16px;}*/
+/*.fa-spin {*/
+/*    margin: 0 auto;}*/
+body {
+    /*background-color: lightgray;*/
+    font-family: "Open Sans", sans-serif;
+}
+.MuiListItemIcon-root .MuiSvgIcon-root {
+    margin-right: 10px;
+}
+
+.MuiCollapse-root .MuiButtonBase-root {
+    padding-left: 50px;
+}
+
+.MuiCollapse-root .MuiButtonBase-root .MuiListItemIcon-root * {
+    /*width: 99.5%;*/
+    /*white-space: initial;*/
+    font-size: 15px;
+}
+.MuiTabPanel-root {
+    padding-bottom: 0px !important;
+}
+
+.MuiDataGrid-root {
+    border: none !important;
+}
+
+tspan  {
+    word-break: break-word !important;
+    white-space: normal !important;
+    width: 50px;
+}
+
+.MuiLink-underlineAlways {
+    padding-left: 20px;
+}
+.css-1pwl2tg{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.MuiTypography-h5 {
+    font-weight: bold;
+    font-size: 21px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.MuiGrid-spacing-xs-2 {
+    margin-top: 5px;
+}
+
+.MuiBox-root {
+    margin-top: 0px;
+}
+.MuiDivider-fullWidth {
+    width: 100%;
+    background-color: unset !important;
+    margin: 15px 0 15px;
+}
+.MuiTypography-caption {
+    text-decoration: underline;
+    color: #999999;
+}
+.MuiLink-underlineAlways {
+    text-decoration: unset;
+}

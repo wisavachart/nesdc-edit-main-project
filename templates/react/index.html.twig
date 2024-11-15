@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('react-app') }}
+    {% endblock %}
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+
+    {#    <link rel="shortcut icon" href="https://allnowgroup.com/images/favicon.svg" />#}
+{#    <link rel="icon" href="{{ asset('images/logo2.svg') }}" type="image/svg+xml">#}
+</head>
+<body>
+{#{% block body %}{% endblock %}#}
+<div id="react-app"></div>
+{% block javascripts %}
+    {{ encore_entry_script_tags('react-app') }}
+{% endblock %}
+<script type="text/javascript">
+    console.log("File main ก็ Run Na")
+</script>
+<script type="text/javascript">
+    // transfers sessionStorage from one tab to another
+    var sessionStorage_transfer = function(event) {
+        if(!event) { event = window.event; } // ie suq
+        if(!event.newValue) return;          // do nothing if no value to work with
+        if (event.key == 'getSessionStorage') {
+            // another tab asked for the sessionStorage -> send it
+            localStorage.setItem('sessionStorage', JSON.stringify(sessionStorage));
+            // the other tab should now have it, so we're done with it.
+            localStorage.removeItem('sessionStorage'); // <- could do short timeout as well.
+        } else if (event.key == 'sessionStorage' && !sessionStorage.length) {
+            // another tab sent data <- get it
+            var data = JSON.parse(event.newValue);
+            for (var key in data) {
+                sessionStorage.setItem(key, data[key]);
+            }
+        }
+    };
+
+    // listen for changes to localStorage
+    if(window.addEventListener) {
+        window.addEventListener("storage", sessionStorage_transfer, false);
+    } else {
+        window.attachEvent("onstorage", sessionStorage_transfer);
+    };
+
+
+    // Ask other tabs for session storage (this is ONLY to trigger event)
+    if (!sessionStorage.length) {
+        localStorage.setItem('getSessionStorage', 'foobar');
+        localStorage.removeItem('getSessionStorage', 'foobar');
+    };
+</script>
+</body>
+</html>
